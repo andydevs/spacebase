@@ -11,15 +11,15 @@
                 <h4 matLine>{{ asteroid.name }}</h4>
                 <p matLine>
                     Diameter: 
-                    {{ asteroid.diameter.min }} 
+                    {{ asteroid.estimated_diameter.feet.estimated_diameter_min }} 
                     to
-                    {{ asteroid.diameter.max }} 
+                    {{ asteroid.estimated_diameter.feet.estimated_diameter_max }} 
                     feet
                 </p>
-                <p matLine *ngIf="asteroid.hazardous">
+                <p matLine *ngIf="asteroid.is_potentially_hazardous_asteroid">
                     Potentially hazardous!
                 </p>
-                <p matLine *ngIf="!asteroid.hazardous">
+                <p matLine *ngIf="!asteroid.is_potentially_hazardous_asteroid">
                     Not hazardous
                 </p>
             </mat-list-item>
