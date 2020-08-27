@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { API_KEY } from "../app.config";
 
 export interface NeowsAsteroid {
     name: string,
@@ -19,15 +20,29 @@ export interface NeowsAsteroid {
 })
 export class NeowsService {
 
-    feedurl = 'https://api.nasa.gov/neo/rest/v1/feed?start_date=2020-08-27&end_date=2020-08-27&api_key=DEMO_KEY'
+    // Feed URL
+    feedurl = 'https://api.nasa.gov/neo/rest/v1/feed'
     
+    // Constructor
     constructor(private http: HttpClient) { }
 
     getFeed(): Observable<NeowsAsteroid[]> {
-        return this.http.get(this.feedurl)
+        // Get today's date
+        let today = new Date().toISOString().split('T')[0]
+
+        // Options
+        let options = {
+            params: new HttpParams()
+                .set('start_date', today)
+                .set('end_date', today)
+                .set('api_key', API_KEY)
+        }
+
+        // Return feed observable
+        return this.http.get(this.feedurl, options)
             .pipe(
                 map( body => body['near_earth_objects'] ), // Get near earth objects
-                map( neo => neo['2020-08-27'] ), // Get today
+                map( neo => neo[today] ), // Get today
                 // Rounding
                 map( today => today.map(
                     asteroid => ({
