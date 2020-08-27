@@ -7,26 +7,22 @@
 
     <mat-card-content>
         <mat-list>
-            <ng-container *ngFor="let day of feed">
-               <h3 matSubheader>{{ day.date }}</h3>
-               <mat-list-item *ngFor='let asteroid of day.asteroids'>
-                   <h4 matLine>{{ asteroid.name }}</h4>
-                   <p matLine>
-                       Diameter: 
-                       {{ asteroid.diameter.min }} 
-                       to
-                       {{ asteroid.diameter.max }} 
-                       feet
-                   </p>
-                   <p matLine *ngIf="asteroid.hazardous">
-                       Potentially hazardous!
-                    </p>
-                   <p matLine *ngIf="!asteroid.hazardous">
-                       Not hazardous
-                    </p>
-               </mat-list-item>
-               <mat-divider></mat-divider>
-            </ng-container>
+            <mat-list-item *ngFor='let asteroid of feed'>
+                <h4 matLine>{{ asteroid.name }}</h4>
+                <p matLine>
+                    Diameter: 
+                    {{ asteroid.diameter.min }} 
+                    to
+                    {{ asteroid.diameter.max }} 
+                    feet
+                </p>
+                <p matLine *ngIf="asteroid.hazardous">
+                    Potentially hazardous!
+                </p>
+                <p matLine *ngIf="!asteroid.hazardous">
+                    Not hazardous
+                </p>
+            </mat-list-item>
         </mat-list>
     </mat-card-content>
 </mat-card>

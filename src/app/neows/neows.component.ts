@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NeowsDay, NeowsService } from './neows.service';
+import { NeowsAsteroid, NeowsService } from './neows.service';
 
 @Component({
   selector: 'app-neows',
@@ -7,7 +7,7 @@ import { NeowsDay, NeowsService } from './neows.service';
   styleUrls: ['./neows.component.scss']
 })
 export class NeowsComponent implements OnInit {
-    feed: NeowsDay[]
+    feed: NeowsAsteroid[]
 
     constructor(public neows: NeowsService) { }
 

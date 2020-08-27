@@ -11,11 +11,6 @@ export interface NeowsAsteroid {
     hazardous: boolean
 }
 
-export interface NeowsDay {
-  date: string,
-  asteroids: NeowsAsteroid[]
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +18,7 @@ export class NeowsService {
     
     constructor() { }
 
-    getFeed(): Observable<NeowsDay[]> {
+    getFeed(): Observable<NeowsAsteroid[]> {
         return of(FEED)
     }
 }
