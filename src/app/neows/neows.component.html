@@ -7,39 +7,26 @@
 
     <mat-card-content>
         <mat-list>
-            <h3 matSubheader>September 8, 2015</h3>
-            <mat-list-item>
-                <h3 matLine>(2015 RC)</h3>
-                <p matLine>Estimated Diameter: 120 to 269 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
-            <mat-list-item>
-                <h3 matLine>(2015 TX237)</h3>
-                <p matLine>Estimated Diameter: 190 to 426 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
-            <mat-list-item>
-                <h3 matLine>(2006 WO1)</h3>
-                <p matLine>Estimated Diameter: 1261 to 2819 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
-            <mat-divider></mat-divider>
-            <h3 matSubheader>September 7, 2015</h3>
-            <mat-list-item>
-                <h3 matLine>(2015 RG2)</h3>
-                <p matLine>Estimated Diameter: 40 to 89 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
-            <mat-list-item>
-                <h3 matLine>(2015 RX83)</h3>
-                <p matLine>Estimated Diameter: 229 to 513 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
-            <mat-list-item>
-                <h3 matLine>(2015 RY83)</h3>
-                <p matLine>Estimated Diameter: 126 to 282 feet</p>
-                <p matLine>Not hazardous</p>
-            </mat-list-item>
+            <ng-container *ngFor="let day of asteroids">
+               <h3 matSubheader>{{ day.date }}</h3>
+               <mat-list-item *ngFor='let asteroid of day.asteroids'>
+                   <h4 matLine>{{ asteroid.name }}</h4>
+                   <p matLine>
+                       Diameter: 
+                       {{ asteroid.diameter.min }} 
+                       to
+                       {{ asteroid.diameter.max }} 
+                       feet
+                   </p>
+                   <p matLine *ngIf="asteroid.hazardous">
+                       Potentially hazardous!
+                    </p>
+                   <p matLine *ngIf="!asteroid.hazardous">
+                       Not hazardous
+                    </p>
+               </mat-list-item>
+               <mat-divider></mat-divider>
+            </ng-container>
         </mat-list>
     </mat-card-content>
 </mat-card>
