@@ -1,6 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
-const ASTEROIDS = [
+interface NeowsAsteroid {
+    name: string,
+    diameter: {
+        min: string,
+        max: string
+    },
+    hazardous: boolean
+}
+
+interface NeowsDay {
+    date: string,
+    asteroids: NeowsAsteroid[]
+}
+
+const ASTEROIDS : NeowsDay[] = [
     {
         date: '2015-09-08',
         asteroids: [
@@ -49,7 +63,7 @@ const ASTEROIDS = [
   styleUrls: ['./neows.component.scss']
 })
 export class NeowsComponent implements OnInit {
-    asteroids = ASTEROIDS
+    asteroids: NeowsDay[] = ASTEROIDS
 
     constructor() { }
 
