@@ -7,7 +7,7 @@
 
     <mat-card-content>
         <mat-list>
-            <ng-container *ngFor="let day of asteroids">
+            <ng-container *ngFor="let day of feed">
                <h3 matSubheader>{{ day.date }}</h3>
                <mat-list-item *ngFor='let asteroid of day.asteroids'>
                    <h4 matLine>{{ asteroid.name }}</h4>
