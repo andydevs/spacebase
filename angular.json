@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "spacebase"
+    }
+  },
+  "defaultProject": "spacebase",
+  "cli": {
+    "analytics": "60c9df9a-4efd-403e-a663-b024bf364a98"
+  }
 }
