@@ -4,4 +4,34 @@
             Latest Martian Weather Data
         </mat-card-title>
     </mat-card-header>
+
+    <mat-card-content>
+        <mat-list>
+            <mat-list-item>
+                <h3 matLine>Atmospheric Temperature</h3>
+                <p matLine>Average: {{ sol.AT.av }} &deg;F</p>
+                <p matLine>Range: {{ sol.AT.mn }} &deg;F to {{ sol.AT.mx }} &deg;F</p>
+            </mat-list-item>
+
+            <mat-list-item>
+                <h3 matLine>Horizontal Wind Speed</h3>
+                <p matLine>Average: {{ sol.HWS.av }} m/s</p>
+                <p matLine>Range: {{ sol.HWS.mn }} m/s to {{ sol.HWS.mx }} m/s</p>
+            </mat-list-item>
+
+            <mat-list-item>
+                <h3 matLine>Atmospheric Pressure</h3>
+                <p matLine>Average: {{ sol.PRE.av }} Pa</p>
+                <p matLine>Range: {{ sol.PRE.mn }} Pa to {{ sol.PRE.mx }} Pa</p>
+            </mat-list-item>
+
+            <mat-list-item>
+                <h3 matLine>Wind Direction (Most Common)</h3>
+                <p matLine>
+                    {{ sol.WD.most_common.compass_degrees }}&deg;
+                    ({{ sol.WD.most_common.compass_point }})
+                </p>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
 </mat-card>
