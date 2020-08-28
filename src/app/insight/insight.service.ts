@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class InsightService {
 
-    feedurl = 'http://api.nasa.gov/insight_weather/'
+    feedurl = 'https://api.nasa.gov/insight_weather/'
 
     constructor(private http: HttpClient) {}
 
