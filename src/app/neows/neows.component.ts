@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NeowsAsteroid, NeowsService } from './neows.service';
+import { NeowsAsteroid } from "./neows-asteroid";
+import { NeowsService } from './neows.service';
 
 @Component({
   selector: 'app-neows',

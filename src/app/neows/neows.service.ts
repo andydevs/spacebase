@@ -3,17 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { API_KEY } from "../app.config";
-
-export interface NeowsAsteroid {
-    name: string,
-    estimated_diameter: {
-        feet: {
-            estimated_diameter_min: number,
-            estimated_diameter_max: number
-        }
-    },
-    is_potentially_hazardous_asteroid: boolean
-}
+import { NeowsAsteroid } from "./neows-asteroid";
 
 @Injectable({
   providedIn: 'root'

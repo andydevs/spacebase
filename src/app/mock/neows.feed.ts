@@ -1,4 +1,4 @@
-import { NeowsAsteroid } from "../neows/neows.service";
+import { NeowsAsteroid } from "../neows/neows-asteroid";
 
 export const FEED : NeowsAsteroid[] = [
     {
