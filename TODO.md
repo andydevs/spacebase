@@ -14,10 +14,14 @@ Upcoming
 Changelog
 -------------------------------------------------------------------------
 
-# 0.2.0: Insight Widget
+#### 0.2.1
+
+- Fixed Insecure API Endpoint
+
+### 0.2.0: Insight Widget
 
 - [x] Insight
 
-# 0.1.0: NeoWs widget
+### 0.1.0: NeoWs widget
 
 - [x] NeoWs
