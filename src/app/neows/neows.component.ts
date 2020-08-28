@@ -10,7 +10,7 @@ import { NeowsService } from './neows.service';
 export class NeowsComponent implements OnInit {
     feed: NeowsAsteroid[]
 
-    constructor(public neows: NeowsService) { }
+    constructor(private neows: NeowsService) { }
 
     ngOnInit(): void {
         this.neows.getFeed()
