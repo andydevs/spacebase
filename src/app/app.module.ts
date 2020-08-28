@@ -11,6 +11,7 @@ import { MatListModule } from '@angular/material/list';
 // Components
 import { AppComponent } from './app.component';
 import { NeowsComponent } from './neows/neows.component';
+import { InsightComponent } from './insight/insight.component';
 
 /**
  * The thing...
@@ -18,7 +19,8 @@ import { NeowsComponent } from './neows/neows.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NeowsComponent
+    NeowsComponent,
+    InsightComponent
   ],
   imports: [
     BrowserModule,
