@@ -12,6 +12,11 @@
         frameborder="0">
     </iframe>
 
+    <img
+        *ngIf='response.media_type == "image"'
+        mat-card-image
+        [src]='response.url'>
+
     <mat-card-content>
         {{ response.explanation }}
     </mat-card-content>
