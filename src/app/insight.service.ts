@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InsightSol } from './insight-sol';
+import { InsightSolResponse } from './insight-sol';
 import { Observable } from 'rxjs';
 import { API_KEY } from './app.config';
 import { map } from 'rxjs/operators';
@@ -14,7 +14,7 @@ export class InsightService {
 
     constructor(private http: HttpClient) {}
 
-    getData(): Observable<InsightSol> {
+    getData(): Observable<InsightSolResponse> {
         // Build parameters
         let options = {
             params: new HttpParams()
@@ -34,11 +34,11 @@ export class InsightService {
                                 (mx:string, key:string):string => key > mx ? key : mx
                             )
                         latest = body[latest]
-                        return latest
+                        return { available: true, sol: latest }
                     }
                     else
                     {
-                        return null
+                        return { available: false }
                     }
                 })
             )

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InsightSol } from '../insight-sol';
+import { InsightSolResponse } from '../insight-sol';
 import { InsightService } from '../insight.service';
 
 @Component({
@@ -8,12 +8,12 @@ import { InsightService } from '../insight.service';
     styleUrls: ['./insight.component.scss']
 })
 export class InsightComponent implements OnInit {
-    sol: InsightSol
+    response: InsightSolResponse
     
     constructor(private insight: InsightService) { }
     
     ngOnInit(): void {
         this.insight.getData()
-            .subscribe(sol => this.sol = sol)
+            .subscribe(response => this.response = response)
     }
 }

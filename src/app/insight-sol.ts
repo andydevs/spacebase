@@ -12,7 +12,7 @@ interface InsightCompasPointObject {
     ct: number
 }
 
-export interface InsightSol {
+interface InsightSol {
     AT: InsightSensorData,
     HWS: InsightSensorData
     PRE: InsightSensorData,
@@ -38,4 +38,9 @@ export interface InsightSol {
     Season: string,
     First_UTC: string,
     Last_UTC: string
+}
+
+export interface InsightSolResponse {
+    available: boolean,
+    sol?: InsightSol
 }
