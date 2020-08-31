@@ -4,11 +4,15 @@
         <mat-card-subtitle>Astronomy Picture of the Day: {{ response.date }}</mat-card-subtitle>
     </mat-card-header>
 
+    <iframe 
+        *ngIf='response.media_type == "video"' 
+        mat-card-image
+        height="480px"
+        [src]='response.url'
+        frameborder="0">
+    </iframe>
+
     <mat-card-content>
         {{ response.explanation }}
     </mat-card-content>
-    
-    <mat-card-actions>
-        <a mat-button href='{{ response.url }}'>View Source</a>
-    </mat-card-actions>
 </mat-card>
