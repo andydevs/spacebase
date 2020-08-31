@@ -31,21 +31,8 @@ export class NeowsService {
         // Return feed observable
         return this.http.get(this.feedurl, options)
             .pipe(
-                map( body => body['near_earth_objects'] ), // Get near earth objects
-                map( neo => neo[today] ), // Get today
-                // Rounding
-                map( today => today.map(
-                    asteroid => ({
-                        ...asteroid,
-                        estimated_diameter: {
-                            feet: {
-                                // This code is jank
-                                estimated_diameter_min: Math.round(asteroid.estimated_diameter.feet.estimated_diameter_min),
-                                estimated_diameter_max: Math.round(asteroid.estimated_diameter.feet.estimated_diameter_max)
-                            }
-                        }
-                    })
-                ))
+                // Get today's near earth objects
+                map( body => body['near_earth_objects'][today] )
             )
     }
 }
