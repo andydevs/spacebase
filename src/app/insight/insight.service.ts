@@ -23,17 +23,23 @@ export class InsightService {
                 .set('ver', '1.0')
         }
 
-        // Return API Call
+        // Return API call mapped
         return this.http.get(this.feedurl, options)
             .pipe(
                 map(body => {
-                    // This code is real jank
-                    let latest = body['sol_keys']
-                        .reduce(
-                            (mx:string, key:string):string => key > mx ? key : mx
-                        )
-                    latest = body[latest]
-                    return latest
+                    if (body['sol_keys'].length > 0) {
+                        // This code is real jank
+                        let latest = body['sol_keys']
+                            .reduce(
+                                (mx:string, key:string):string => key > mx ? key : mx
+                            )
+                        latest = body[latest]
+                        return latest
+                    }
+                    else
+                    {
+                        return null
+                    }
                 })
             )
     }

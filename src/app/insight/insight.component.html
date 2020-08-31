@@ -6,7 +6,7 @@
     </mat-card-header>
 
     <mat-card-content>
-        <mat-list>
+        <mat-list *ngIf='sol'>
             <mat-list-item>
                 <h3 matLine>Atmospheric Temperature</h3>
                 <p matLine>Average: {{ sol.AT.av }} &deg;F</p>
