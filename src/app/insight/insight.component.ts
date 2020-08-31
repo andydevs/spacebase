@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { InsightSol } from './insight-sol';
-import { InsightService } from './insight.service';
+import { InsightSol } from '../insight-sol';
+import { InsightService } from '../insight.service';
 
 @Component({
     selector: 'app-insight',

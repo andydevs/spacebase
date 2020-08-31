@@ -2,7 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { InsightSol } from './insight-sol';
 import { Observable } from 'rxjs';
-import { API_KEY } from '../app.config';
+import { API_KEY } from './app.config';
 import { map } from 'rxjs/operators';
 
 @Injectable({
