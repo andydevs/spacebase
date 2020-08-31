@@ -7,11 +7,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
 
 // Components
 import { AppComponent } from './app.component';
 import { NeowsComponent } from './neows/neows.component';
 import { InsightComponent } from './insight/insight.component';
+import { ApodComponent } from './apod/apod.component';
 
 /**
  * The thing...
@@ -20,7 +22,8 @@ import { InsightComponent } from './insight/insight.component';
   declarations: [
     AppComponent,
     NeowsComponent,
-    InsightComponent
+    InsightComponent,
+    ApodComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { InsightComponent } from './insight/insight.component';
     MatToolbarModule,
     MatGridListModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

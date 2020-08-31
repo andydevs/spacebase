@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ response.title }}</mat-card-title>
+        <mat-card-subtitle>Astronomy Picture of the Day: {{ response.date }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        {{ response.explanation }}
+    </mat-card-content>
+    
+    <mat-card-actions>
+        <a mat-button href='{{ response.url }}'>View Source</a>
+    </mat-card-actions>
+</mat-card>
