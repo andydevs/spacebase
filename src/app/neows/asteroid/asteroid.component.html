@@ -1,0 +1,16 @@
+<div class="asteroid">
+    <h4 class="asteroid-line asteroid-title">{{ asteroid.name }}</h4>
+    <p class="asteroid-line">
+        Diameter: 
+        {{ asteroid.estimated_diameter.feet.estimated_diameter_min | number: '1.0-0' }} 
+        to
+        {{ asteroid.estimated_diameter.feet.estimated_diameter_max | number: '1.0-0' }} 
+        feet
+    </p>
+    <p class="asteroid-line" *ngIf="asteroid.is_potentially_hazardous_asteroid">
+        Potentially hazardous!
+    </p>
+    <p class="asteroid-line" *ngIf="!asteroid.is_potentially_hazardous_asteroid">
+        Not hazardous
+    </p>
+</div>

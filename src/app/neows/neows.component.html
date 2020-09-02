@@ -8,22 +8,7 @@
     <mat-card-content>
         <mat-grid-list cols='2'>
             <mat-grid-tile *ngFor='let asteroid of feed'>
-                <div class="neows-asteroid">
-                    <h4 class="neows-asteroid-line neows-asteroid-title">{{ asteroid.name }}</h4>
-                    <p class="neows-asteroid-line">
-                        Diameter: 
-                        {{ asteroid.estimated_diameter.feet.estimated_diameter_min | number: '1.0-0' }} 
-                        to
-                        {{ asteroid.estimated_diameter.feet.estimated_diameter_max | number: '1.0-0' }} 
-                        feet
-                    </p>
-                    <p class="neows-asteroid-line" *ngIf="asteroid.is_potentially_hazardous_asteroid">
-                        Potentially hazardous!
-                    </p>
-                    <p class="neows-asteroid-line" *ngIf="!asteroid.is_potentially_hazardous_asteroid">
-                        Not hazardous
-                    </p>
-                </div>
+                <app-asteroid [asteroid]='asteroid'></app-asteroid>
             </mat-grid-tile>
         </mat-grid-list>
     </mat-card-content>

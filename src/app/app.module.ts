@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 // Components
 import { AppComponent } from './app.component';
 import { NeowsComponent } from './neows/neows.component';
+import { AsteroidComponent } from './neows/asteroid/asteroid.component';
 import { InsightComponent } from './insight/insight.component';
 import { ApodComponent } from './apod/apod.component';
 
@@ -23,7 +24,8 @@ import { ApodComponent } from './apod/apod.component';
     AppComponent,
     NeowsComponent,
     InsightComponent,
-    ApodComponent
+    ApodComponent,
+    AsteroidComponent
   ],
   imports: [
     BrowserModule,
