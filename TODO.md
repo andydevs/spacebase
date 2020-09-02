@@ -15,6 +15,11 @@ Upcoming
 Changelog
 -------------------------------------------------------------------------
 
+#### 0.3.1
+
+- Fixed error when APoD does not render
+- Insight and APoD services error if data unavailable
+
 ### 0.3.0: APoD Widget
 
 - [x] APoD (8 - 31 - 2020)
