@@ -15,12 +15,14 @@ Upcoming
 Updates
 -------------------------------------------------------------------------
 
+Changelog
+-------------------------------------------------------------------------
+
+### 0.4.0: Grid Layout
+
 - Created responsive grid layout for homepage (9 - 2 - 2020)
 - Created grid layout for neows (9 - 2 - 2020)
 - Created asteroid subcomponent to encapsulate asteroid data (9 - 2 - 2020)
-
-Changelog
--------------------------------------------------------------------------
 
 #### 0.3.1
 
