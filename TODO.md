@@ -15,10 +15,12 @@ Upcoming
 Updates
 -------------------------------------------------------------------------
 
-- Straight up stole NASA's favicon to use for my site
-
 Changelog
 -------------------------------------------------------------------------
+
+#### 0.4.1
+
+- Straight up stole NASA's favicon to use for my site (9 - 2 - 2020)
 
 ### 0.4.0: Grid Layout
 
