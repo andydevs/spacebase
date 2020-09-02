@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InsightSolResponse } from './insight-sol';
+import { InsightSol } from './insight-sol';
 import { Observable } from 'rxjs';
 import { API_KEY } from './app.config';
 import { map } from 'rxjs/operators';
@@ -14,7 +14,7 @@ export class InsightService {
 
     constructor(private http: HttpClient) {}
 
-    getData(): Observable<InsightSolResponse> {
+    getData(): Observable<InsightSol> {
         // Build parameters
         let options = {
             params: new HttpParams()
@@ -33,12 +33,11 @@ export class InsightService {
                             .reduce(
                                 (mx:string, key:string):string => key > mx ? key : mx
                             )
-                        latest = body[latest]
-                        return { available: true, sol: latest }
+                            return body[latest]
                     }
                     else
                     {
-                        return { available: false }
+                        throw new Error('Insight weather data unavailable')
                     }
                 })
             )

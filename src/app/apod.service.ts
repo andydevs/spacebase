@@ -23,7 +23,7 @@ export class ApodService {
 
         // Update url
         return this.http.get(this.feedurl, options)
-            .pipe<ApodResponse>(
+            .pipe(
                 map<any, ApodResponse>(
                     body => ({
                         ...body,
