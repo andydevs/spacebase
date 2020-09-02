@@ -9,12 +9,19 @@ import { ApodService } from '../apod.service';
 })
 export class ApodComponent implements OnInit {
 
+    available: boolean
     response: ApodResponse
 
     constructor(private apod: ApodService) { }
     
     ngOnInit(): void {
         this.apod.getData()
-            .subscribe(response => this.response = response)
+            .subscribe(response => {
+                this.available = true
+                this.response = response
+            },
+            error => {
+                this.available = false
+            })
     }
 }

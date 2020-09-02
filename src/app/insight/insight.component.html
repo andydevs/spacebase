@@ -1,5 +1,5 @@
 <mat-card>
-    <mat-card-header>
+    <mat-card-header *ngIf='response && response.available'>
         <mat-card-title>Latest Martian Weather Data</mat-card-title>
     </mat-card-header>
 
@@ -34,6 +34,6 @@
     </mat-card-content>
 
     <mat-card-content *ngIf='response && !response.available'>
-        <p>No data available</p>
+        <p>No Insight weather data available</p>
     </mat-card-content>
 </mat-card>
