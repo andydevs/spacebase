@@ -1,7 +1,33 @@
-.container {
-    margin: 20pt;
-    
-    .widget {
-        margin: 10pt;
+$mobile-breakpoint: 750px;
+
+.homepage-grid-layout {
+    padding: 16pt;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 16pt;
+    grid-template-areas:
+        "apod neows"
+        "insight neows";
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "apod"
+            "insight"
+            "neows";
+    }
+
+    .apod-tile {
+        grid-area: apod;
+    }
+
+    .insight-tile {
+        grid-area: insight;
+    }
+
+    .neows-tile {
+        grid-area: neows;
     }
 }

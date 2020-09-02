@@ -12,13 +12,18 @@ Backlog
 Upcoming
 -------------------------------------------------------------------------
 
+Updates
+-------------------------------------------------------------------------
+
+- Created responsive grid layout for homepage (9 - 2 - 2020)
+
 Changelog
 -------------------------------------------------------------------------
 
 #### 0.3.1
 
-- Fixed error when APoD does not render
-- Insight and APoD services error if data unavailable
+- Fixed error when APoD does not render (9 - 1 - 2020)
+- Insight and APoD services error if data unavailable (9 - 1 - 2020)
 
 ### 0.3.0: APoD Widget
 
