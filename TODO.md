@@ -26,10 +26,12 @@ Upcoming
 Updates
 -------------------------------------------------------------------------
 
-- FIX Insight weather data component view rendering errors (9 - 15 - 2020)
-
 Changelog
 -------------------------------------------------------------------------
+
+#### 0.4.2
+
+- FIX Insight weather data component view rendering errors (9 - 15 - 2020)
 
 #### 0.4.1
 
