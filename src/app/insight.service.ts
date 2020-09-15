@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { InsightSol } from './insight-sol';
 import { Observable } from 'rxjs';
 import { API_KEY } from './app.config';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({
     providedIn: 'root'
@@ -33,7 +33,7 @@ export class InsightService {
                             .reduce(
                                 (mx:string, key:string):string => key > mx ? key : mx
                             )
-                            return body[latest]
+                        return body[latest]
                     }
                     else
                     {

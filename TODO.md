@@ -6,6 +6,17 @@ Project Start: 8 - 26 - 2020
 Backlog
 -------------------------------------------------------------------------
 
+- Test
+    - Services
+        - APoD
+        - NEOWs
+        - Insight
+    - Components
+        - APoD
+        - NEOWs
+            - Asteroid
+        - Insight
+
 - Images
     - Earth Engine
 
@@ -14,6 +25,8 @@ Upcoming
 
 Updates
 -------------------------------------------------------------------------
+
+- FIX Insight weather data component view rendering errors (9 - 15 - 2020)
 
 Changelog
 -------------------------------------------------------------------------

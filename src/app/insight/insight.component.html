@@ -5,29 +5,29 @@
 
     <mat-card-content *ngIf='available'>
         <mat-list>
-            <mat-list-item>
+            <mat-list-item *ngIf='response.AT'>
                 <h3 matLine>Atmospheric Temperature</h3>
-                <p matLine>Average: {{ response.sol.AT.av }} &deg;F</p>
-                <p matLine>Range: {{ response.sol.AT.mn }} &deg;F to {{ response.sol.AT.mx }} &deg;F</p>
+                <p matLine>Average: {{ response.AT.av }} &deg;F</p>
+                <p matLine>Range: {{ response.AT.mn }} &deg;F to {{ response.AT.mx }} &deg;F</p>
             </mat-list-item>
 
-            <mat-list-item>
+            <mat-list-item *ngIf='response.HWS'>
                 <h3 matLine>Horizontal Wind Speed</h3>
-                <p matLine>Average: {{ response.sol.HWS.av }} m/s</p>
-                <p matLine>Range: {{ response.sol.HWS.mn }} m/s to {{ response.sol.HWS.mx }} m/s</p>
+                <p matLine>Average: {{ response.HWS.av }} m/s</p>
+                <p matLine>Range: {{ response.HWS.mn }} m/s to {{ response.HWS.mx }} m/s</p>
             </mat-list-item>
 
-            <mat-list-item>
+            <mat-list-item *ngIf='response.PRE'>
                 <h3 matLine>Atmospheric Pressure</h3>
-                <p matLine>Average: {{ response.sol.PRE.av }} Pa</p>
-                <p matLine>Range: {{ response.sol.PRE.mn }} Pa to {{ response.sol.PRE.mx }} Pa</p>
+                <p matLine>Average: {{ response.PRE.av }} Pa</p>
+                <p matLine>Range: {{ response.PRE.mn }} Pa to {{ response.PRE.mx }} Pa</p>
             </mat-list-item>
 
-            <mat-list-item>
+            <mat-list-item *ngIf='response.WD && response.WD.most_common'>
                 <h3 matLine>Wind Direction (Most Common)</h3>
                 <p matLine>
-                    {{ response.sol.WD.most_common.compass_degrees }}&deg;
-                    ({{ response.sol.WD.most_common.compass_point }})
+                    {{ response.WD.most_common.compass_degrees }}&deg;
+                    ({{ response.WD.most_common.compass_point }})
                 </p>
             </mat-list-item>
         </mat-list>

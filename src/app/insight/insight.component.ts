@@ -8,7 +8,7 @@ import { InsightService } from '../insight.service';
     styleUrls: ['./insight.component.scss']
 })
 export class InsightComponent implements OnInit {
-    available: boolean
+    available: boolean = false
     response: InsightSol
     
     constructor(private insight: InsightService) { }
@@ -16,6 +16,7 @@ export class InsightComponent implements OnInit {
     ngOnInit(): void {
         this.insight.getData()
             .subscribe(response => {
+                console.log(response)
                 this.available = true
                 this.response = response
             },
