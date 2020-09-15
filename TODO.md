@@ -6,6 +6,11 @@ Project Start: 8 - 26 - 2020
 Backlog
 -------------------------------------------------------------------------
 
+- Images
+    - Earth Engine
+
+- Logging
+
 - Test
     - Services
         - APoD
@@ -16,9 +21,6 @@ Backlog
         - NEOWs
             - Asteroid
         - Insight
-
-- Images
-    - Earth Engine
 
 Upcoming
 -------------------------------------------------------------------------

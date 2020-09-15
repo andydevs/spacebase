@@ -16,7 +16,6 @@ export class InsightComponent implements OnInit {
     ngOnInit(): void {
         this.insight.getData()
             .subscribe(response => {
-                console.log(response)
                 this.available = true
                 this.response = response
             },
